@@ -1,40 +1,43 @@
-# MeshWeaver
+# MeshWeaver: Zero-Dependency P2P Async Task Broker
 
-MeshWeaver is a decentralized peer-to-peer asynchronous task broker built with Python.
+## About the Project
 
-The project is designed for distributed and edge-computing environments where a central task broker is undesirable.
+MeshWeaver is a decentralized P2P task broker built with Python. It allows multiple nodes to discover each other, share system load, distribute tasks, and execute them remotely without a central server.
 
-## Week 1
+## 4 Weeks of Work
 
-Week 1 implements the basic asynchronous networking layer.
+### Week 1
+- Built asynchronous TCP communication using `asyncio`.
+- Implemented task serialization and remote execution.
+- Added result transfer between nodes.
 
-Features:
+### Week 2
+- Implemented a Kademlia-style DHT.
+- Added peer discovery and XOR-based node IDs.
+- Implemented Gossip Protocol for CPU/RAM sharing.
 
-- Async TCP communication
-- Independent Python nodes
-- PING/PONG communication
-- Peer registration
-- Python function serialization
-- Remote task execution
-- Result transmission
+### Week 3
+- Added load-based task routing.
+- Implemented heartbeat monitoring.
+- Added peer failure detection and task re-routing.
 
-## Week 2
+### Week 4
+- Added HMAC-SHA256 message security.
+- Built a Tkinter graphical dashboard.
+- Added CPU/RAM monitoring, peer list, task submission, results, and live logs.
 
-Week 2 introduces decentralized peer discovery and system-state sharing.
+## What I Learned
 
-Features:
+- Python `asyncio` and TCP networking
+- P2P and distributed-system concepts
+- DHT and peer discovery
+- Gossip and heartbeat protocols
+- Task serialization and remote execution
+- Load-based task scheduling
+- Fault tolerance and security
+- Tkinter GUI development
+- Connecting GUI with an asynchronous backend
 
-- SHA-256 node identifiers
-- Lightweight Kademlia-style DHT
-- Dynamic peer discovery
-- Bootstrap nodes
-- Gossip protocol
-- CPU load broadcasting
-- Distributed peer state
+## Conclusion
 
-## Running MeshWeaver
-
-Start the first node:
-
-```bash
-python main.py 5001
+MeshWeaver successfully demonstrates a decentralized task-broker system with peer discovery, remote task execution, load-based routing, fault detection, security, and a graphical dashboard. The project gave me practical experience in **distributed systems, networking, asynchronous programming, and edge-computing concepts**.
